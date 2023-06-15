@@ -5,6 +5,7 @@ metadata:
  namespace: devops-tools
  annotations:
    cert-manager.io/cluster-issuer: "le-example-http"
+   external-dns.alpha.kubernetes.io/hostname: "jenkins.dev-riles.xyz."
 spec:
  tls:
    - hosts:

@@ -7,7 +7,6 @@ metadata:
       prometheus.io/scrape: 'true'
       prometheus.io/path:   /
       prometheus.io/port:   '8080'
-      external-dns.alpha.kubernetes.io/hostname: "jenkins.dev-riles.xyz."
 spec:
   selector: 
     app: jenkins-server
