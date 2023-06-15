@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: jenkins
+ namespace: devops-tools
+ annotations:
+   cert-manager.io/issuer: "le-example-http"
+spec:
+ tls:
+   - hosts:
+       - jenkins.dev-riles.xyz
+     secretName: tls-jenkins-ingress-http
+ rules:
+   - host: jenkins.dev-riles.xyz
+     http:
+       paths:
+         - path: /
+           pathType: Prefix
+           backend:
+             service:
+               name: jenkins-service
+               port:
+                 name: web
