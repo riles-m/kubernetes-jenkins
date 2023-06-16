@@ -10,7 +10,7 @@ metadata:
 spec:
   selector: 
     app: jenkins-server
-  type: ClusterIp
+  type: ClusterIP
   ports:
     - port: 8080
       targetPort: 8080
